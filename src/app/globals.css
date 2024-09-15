@@ -37,6 +37,20 @@ body * {
   color: var(--text-color);
 }
 
+/* Estilize ícones SVG */
+#social-links img {
+  width: 24px; /* Ajuste o tamanho conforme necessário */
+  height: 24px;
+  display: block;
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg); /* Ajuste os valores conforme necessário */
+
+}
+
+/* Links sociais no modo escuro */
+.light #social-links img {
+  filter: invert(0);
+}
+
 /* Container principal */
 #container {
   width: 100%;
@@ -149,12 +163,6 @@ ul li a:hover {
 
 #social-links a:hover {
   background: var(--highlight-color);
-}
-
-#social-links img {
-  width: 24px; /* Ajuste o tamanho conforme necessário */
-  height: 24px;
-  display: block;
 }
 
 /* Rodapé */
