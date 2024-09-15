@@ -14,7 +14,7 @@ O **Discover Lipelacross Links** é um projeto desenvolvido para demonstrar habi
 
 ### Exemplo Visual do Projeto
 
-![Exemplo Visual](public/assets/preview.png) <!-- Certifique-se de substituir o link da imagem pelo correto -->
+![chrome-capture-2024-9-15](https://github.com/user-attachments/assets/8fcc0fe6-3344-4864-be0e-545c8faf8b28)
 
 ## ✔️ Técnicas e Tecnologias Utilizadas
 
