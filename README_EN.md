@@ -14,7 +14,7 @@
 
 ### Visual Example of the Project
 
-![chrome-capture-2024-9-15](https://github.com/user-attachments/assets/8fcc0fe6-3344-4864-be0e-545c8faf8b28)
+![chrome-capture-2024-9-15](https://github.com/user-attachments/assets/faff7a31-b101-4664-9fed-4dbc5b732b7c)
 
 ## ✔️ Techniques and Technologies Used
 
