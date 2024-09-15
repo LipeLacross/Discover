@@ -1,95 +1,71 @@
-import Image from "next/image";
+// src/app/page.tsx
+"use client";
+
+import { useEffect } from "react";
 import styles from "./page.module.css";
+import { toggleMode } from "./script";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+export default function Page() {
+    useEffect(() => {
+        const switchButton = document.querySelector("#switch") as HTMLElement;
+        switchButton?.addEventListener("click", toggleMode);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+        return () => {
+            switchButton?.removeEventListener("click", toggleMode);
+        };
+    }, []);
+
+    return (
+        <div id="container" className={styles.container}>
+            <div id="profile" className={styles.profile}>
+                <img src="/assets/avatar.png" alt="Foto de Felipe" />
+                <p>@lipelacross</p>
+            </div>
+
+            <div id="switch" className={styles.switch}>
+                <button></button>
+                <span></span>
+            </div>
+
+            <ul className={styles.links}>
+                <li>
+                    <a href="https://lipelacrossplus.netlify.app/">Ver meu portfólio</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/lipelacross-developer" target="_blank">
+                        Conheça meu LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@DevLipeLacross" target="_blank">
+                        Assista aos meus vídeos
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/lipelacross/" target="_blank">
+                        Acompanhe-me no Instagram
+                    </a>
+                </li>
+            </ul>
+
+            <div id="social-links" className={styles.socialLinks}>
+                <a href="https://github.com/lipelacross" target="_blank">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="https://www.instagram.com/lipelacross/" target="_blank">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="https://www.youtube.com/@DevLipeLacross" target="_blank">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+                <a href="https://www.linkedin.com/in/lipelacross-developer" target="_blank">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </div>
+
+            <footer className={styles.footer}>
+                Feito por mim com ♥ - Desenvolvedor Fullstack
+            </footer>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
