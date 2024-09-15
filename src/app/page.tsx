@@ -1,9 +1,9 @@
 // src/app/page.tsx
-"use client";
+"use client"; // Adicione esta linha no topo do arquivo
 
-import { useEffect } from "react";
-import styles from "./page.module.css";
-import { toggleMode } from "./script";
+import React, { useEffect } from 'react';
+import styles from './page.module.css';
+import { toggleMode } from './script';
 
 export default function Page() {
     useEffect(() => {
@@ -50,16 +50,16 @@ export default function Page() {
 
             <div id="social-links" className={styles.socialLinks}>
                 <a href="https://github.com/lipelacross" target="_blank">
-                    <ion-icon name="logo-github"></ion-icon>
+                    <img src="/assets/logo-github.svg" alt="GitHub" />
                 </a>
                 <a href="https://www.instagram.com/lipelacross/" target="_blank">
-                    <ion-icon name="logo-instagram"></ion-icon>
+                    <img src="/assets/logo-instagram.svg" alt="Instagram" />
                 </a>
                 <a href="https://www.youtube.com/@DevLipeLacross" target="_blank">
-                    <ion-icon name="logo-youtube"></ion-icon>
+                    <img src="/assets/logo-youtube.svg" alt="YouTube" />
                 </a>
                 <a href="https://www.linkedin.com/in/lipelacross-developer" target="_blank">
-                    <ion-icon name="logo-linkedin"></ion-icon>
+                    <img src="/assets/logo-linkedin.svg" alt="LinkedIn" />
                 </a>
             </div>
 
